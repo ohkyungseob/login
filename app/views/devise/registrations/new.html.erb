@@ -1,0 +1,54 @@
+<h2>회원가입</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :이메일 %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email"  %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :비밀번호 %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 자 이상)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password" %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :비밀번호확인 %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %><br />
+  </div>
+
+  <div>
+    <%= f.label :이름 %>
+    <%= f.text_field :name, :required => true  %>
+  </div>
+
+  <div class="btn-group" data-toggle="buttons">
+    <p style="margin-top:0;margin-bottom:0;"><%= f.label :성별 %></p>
+    <label class="radio_button"> 남자
+       <%= f.radio_button :gender, '남자', checked: true %>
+    </label>
+    <label class="radio_button active"> 여자
+       <%= f.radio_button :gender, '여자', checked: true %>
+    </label>
+   </div>
+
+   <div>
+    <%= f.label :생년월일 %>
+    <%= f.text_field :birth, :required => true  %>
+   </div>
+
+   <div>
+    <%= f.label :전화번호 %>
+    <%= f.text_field :phonenumber, :required => true  %>
+   </div>
+
+  <div class="actions">
+    <%= f.submit "가입하기" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
