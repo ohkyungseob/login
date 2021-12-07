@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 	
 	get '/post', to: 'navermains#post'
 	post '/create', to: 'navermains#create'
+	post '/create1', to: 'navermains#create1'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

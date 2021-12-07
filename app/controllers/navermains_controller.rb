@@ -22,6 +22,12 @@ class NavermainsController < ApplicationController
 	def content
 		@episodes = Episode.all
 		@webtoons = Webtoon.all
+		@comments = Comment.all
+	end
+	def create1
+		comment = params[:usercomment]
+		Comment.create(usercomment: comment)
+		redirect_to '/buy/content'
 	end
 	
 	def create

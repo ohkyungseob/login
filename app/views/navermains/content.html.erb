@@ -4,7 +4,7 @@
 	}
 	#var {
 		text-align: center;
-		font-size: 350px;
+		font-size: 370px;
 	}
 </style>
 
@@ -441,7 +441,7 @@
 							>
 						</li>
 						<li class="current">
-							<a onclick="nclk_v2(event,'LNB.toon');" href="/webtoon/weekday"
+							<a onclick="nclk_v2(event,'LNB.toon');" href="/naverwebtoon"
 								><span class="Ntxt_webtoon">웹툰</span></a
 							>
 						</li>
@@ -645,6 +645,24 @@
 							<% end %>
 				
 	</body>
+				
+				<br><br><br><br>
+<h1>
+	댓글
+				</h1>
+				<br><br>
+<form action="/create1" method="post">
+	댓글: <input type="text" name="usercomment"><br>
+	작성하기:    <input type="submit" value="Submit">
+</form><br>
+				<% @comments.each do |comment| %>
+				<hr>
+				<h1>댓글번호: <%= comment.id %></h1>
+				<h2>댓글 내용: <%= comment.usercomment %></h2>
+				<h3>작성시간: <%= comment.created_at %></h3>
+				<hr><br>	
+				<% end %>
+				
 </html>
 				
 </div>
