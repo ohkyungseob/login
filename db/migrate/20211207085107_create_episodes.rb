@@ -5,6 +5,7 @@ class CreateEpisodes < ActiveRecord::Migration[5.2]
 		t.integer :cookiecount
 		t.date :registration
 		t.float :scope
+		
       t.timestamps
     end
   end

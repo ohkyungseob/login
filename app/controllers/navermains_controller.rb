@@ -19,6 +19,9 @@ class NavermainsController < ApplicationController
 	def buy
 		
 	end
+	def content
+		@webtoons = Webtoon.all
+	end
 	
 	def create
 		 division1 = params[:division1]
