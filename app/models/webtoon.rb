@@ -1,0 +1,2 @@
+class Webtoon < ApplicationRecord
+end

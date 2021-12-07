@@ -13,6 +13,10 @@ class NavermainsController < ApplicationController
 		
 	end
 	def list
+		@webtoons = Webtoon.all
+		@episodes = Episode.all
+	end
+	def buy
 		
 	end
 	

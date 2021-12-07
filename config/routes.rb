@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	get '/mypage/gym', to: 'navermains#gym'
 	get '/mypage/cookie', to: 'navermains#cookie'
 	get '/list', to: 'navermains#list'
+	get 'list/buy', to: 'buy#buy'
 	
 	get '/post', to: 'navermains#post'
 	post '/create', to: 'navermains#create'
