@@ -2,6 +2,10 @@
 #aa1{
 	 text-align:justify;
 	}
+	#var {
+		text-align: center;
+		font-size: 350px;
+	}
 </style>
 
 <!DOCTYPE html>
@@ -443,7 +447,7 @@
 						</li>
 
 						<li>
-							<a onclick="nclk_v2(event,'LNB.my');" href="/mypage/favorite"
+							<a onclick="nclk_v2(event,'LNB.my');" href="/mypage"
 								><span class="Ntxt_mypage">마이페이지</span></a
 							><span class="bar"></span>
 						</li>
@@ -631,14 +635,15 @@
 					</div>
 					<!-- //상세 정보영역 -->
 					<!-- 리스트 -->	
-					<hr align="center" style="border: solid 10px green; width: 50%;"><br>
-					
-					<img onerror="this.src='https://ssl.pstatic.net/static/comic/images/migration/common/blank.gif'" 
-src="https://shared-comic.pstatic.net/thumb/webtoon/784518/thumbnail/thumbnail_IMAG04_7b9255d6-d826-4b7e-a009-1f9a1f8e054b.jpg" width="1000" height="500"
-alt="대공님, 실수였어요!" title="대공님, 실수였어요!">
-					<img onerror="this.src='https://ssl.pstatic.net/static/comic/images/migration/common/blank.gif'" 
-src="https://shared-comic.pstatic.net/thumb/webtoon/784518/thumbnail/thumbnail_IMAG04_7b9255d6-d826-4b7e-a009-1f9a1f8e054b.jpg" width="1000" height="500"
-alt="대공님, 실수였어요!" title="대공님, 실수였어요!">
+				
+				<br><br><br><br><br><br><br><br><br><br><hr style="border: solid 10px black;"><br><br><br><br><br><br><br><br><br><br>
+					<% @episodes.each do |episode| %>
+							<h2 id="var">
+								<%= episode.content %>
+							</h2>
+							
+							<% end %>
+				
 	</body>
 </html>
 				

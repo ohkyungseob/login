@@ -20,6 +20,7 @@ class NavermainsController < ApplicationController
 		
 	end
 	def content
+		@episodes = Episode.all
 		@webtoons = Webtoon.all
 	end
 	

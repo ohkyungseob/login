@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_12_07_103910) do
     t.integer "round"
     t.integer "cookiecount"
     t.date "registration"
-    t.integer "scope"
+    t.float "scope"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "content"
